@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="anime.min.js"></script>
+    <script src="js/script.js" defer></script>
+
+    <title>Your Portfolio</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+   
+
+    <!-- Name and About Section -->
+    <section id="about">
+        <div class="container about-section">
+            <div class="about-content">
+                <img src="./images/IMG_7038.jpg" alt="Your Image" class="about-image">
+                <div class="about-details">
+                    <h2>Hi, I'm Yanni &#128075</h2>
+                    <p>
+                        I'm a dedicated computer science and applied mathematics student at The University of North Carolina at Chapel Hill, deeply passionate about the realms of data science and machine learning. Proficient in Python, Java, and web development (HTML,CSS, and JavaScript), I've honed my skills in data manipulation using Pandas and NumPy, visualization with Matplotlib and Seaborn, and implemented machine learning models with Scikit-learn, and TensorFlow. 
+                    </p>
+                    <p>
+                        My research interests gravitate towards natural language processing, and I'm eager to contribute to advancements in these fields. Beyond academics, I indulge in basketball and weight training, adding a holistic touch to my technical pursuits. You can connect with me on LinkedIn/GitHub to explore my latest projects and insights. Excited about the endless possibilities in the tech world, I look forward to leveraging my skills to make a meaningful impact. Thanks for visiting my portfolio!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <div class="project-info">
+                        <img src="./images/VBH_img.jpg" alt="Project 1 Image" class="project-image">
+                        <div class="project-details">
+                            <h3>Exploration of Cations For VBH Model System Using Machine Learning</h3>
+                            <p> Trained and tested regressive models to identify cations for solubility optimization of redox active material for non-aqueous redox flow batteries.</p>
+                            <a href="/projects/project1.html" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="project">
+                    <div class="project-info">
+                        <img src="./images/Image_Captioning.png" alt="Project 2 Image" class="project-image">
+                        <div class="project-details">
+                            <h3>Image Captioning With Deep Neural Networks </h3>
+                            <p> Trained a recurrent neural network to generate string captions for any image input</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="project">
+                    <div class="project-info">
+                        <img src="./images/fake_news_detection_img.jpg" alt="Project 2 Image" class="project-image">
+                        <div class="project-details">
+                            <h3>Fake News Detection ML </h3>
+                            <p> Trained a support vector machine using TF-IDF vectorized news text to classify news between reliable and unreliable</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="project">
+                    <div class="project-info">
+                        <img src="./images/encoder_decoder.png" alt="Project 2 Image" class="project-image">
+                        <div class="project-details">
+                            <h3>Image Captioning With Deep Neural Networks </h3>
+                            <p> Trained a recurrent neural network to generate string captions for any image input</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+<!-- Resume Section -->
+<section id="resume" >
+    <div class="container">
+        <h2>Resume</h2>
+
+        <!-- PDF Viewer Container (Static Image) -->
+        <div class="pdf-viewer" >
+            <img src="./images/Resume_Yanni Etchi.jpg" alt="PDF Preview" width="100%" height="auto">
+        </div>
+
+        
+        <div class="download-button-container">
+            <a class="download-button" href="./images/Resume_Yanni Etchi.pdf" download="Resume_Yanni Etchi.pdf">Download</a>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>Let's connect and collaborate!</p>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/yanni-etchi/" target="_blank">
+                <img src="./images/linkedin-color-svgrepo-com.svg" alt="LinkedIn Logo" class="social-logo">
+            </a>
+            <a href="https://twitter.com/your-twitter-handle" target="_blank">
+                <img src="./images/twitter-1-svgrepo-com.svg" alt="Twitter Logo" class="social-logo">
+            </a>
+            <a href="https://github.com/YanniEtchi237" target="_blank">
+                <img src="./images/github-color-svgrepo-com.svg" alt="GitHub Logo" class="social-logo">
+            </a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Resume Section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
+

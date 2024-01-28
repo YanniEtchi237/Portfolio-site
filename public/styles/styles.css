@@ -1,0 +1,346 @@
+/* Add this to styles.css */
+/* Add this to styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Reverted to default background color */
+    color: #292b2c; /* Reverted to default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav {
+    background-color: rgba(238, 242, 246, 0.8); /* Translucent background color */
+    padding: 1em 0;
+    position: fixed; /* Make the navbar fixed */
+    width: 100%; /* Take up the full width of the viewport */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure the navbar appears above other e */
+    
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+nav li {
+    margin-left: 15px; /* Add space between navbar items */
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #292b2c;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #55acee; /* Underline color */
+    bottom: -3px; /* Adjust the distance from text */
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #55acee;
+}
+
+nav li:hover a::after {
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ... (rest of the styles, unchanged) */
+
+
+/* ... (rest of the styles, unchanged) */
+
+
+.profile-image {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.header-content {
+    flex-grow: 1;
+}
+
+h1,
+h2,
+h3 {
+    color: #292b2c;
+}
+
+section {
+    padding: 3em 0;
+}
+#about{
+    padding: 9%;
+}
+
+.about-section {
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-details {
+    width: 65%;
+}
+#projects{
+    background-color: #f5f5f5;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Adjust as needed */
+}
+
+
+.project {
+    width: 90%;
+    margin-bottom: 30px;
+    margin-right: 2%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.project:last-child {
+    margin-right: 0;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project-info {
+    flex-grow: 1;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-details {
+    padding: 0 20px;
+}
+
+.project h3 {
+    color: #292b2c;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #343a40;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #55acee;
+}
+
+.project-options {
+    display: flex;
+    align-items: center;
+}
+
+.options-button {
+    background-color: #343a40;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options-button:hover {
+    background-color: #55acee;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Updated CSS */
+#contact {
+    background-color: #343a40;
+    padding: 40px 0;
+    text-align: center; /* Center the content */
+    color: #ffffff;
+}
+#contact h2{
+    color: #ffffff;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form horizontally */
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+/* Add this CSS for styling */
+#resume {
+    position: relative;
+    color: #fff; /* Set text color for better visibility on the background */
+    padding: 80px 0;
+    text-align: center;
+    background-image: url("/public/images/encoder_decoder.png");
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.pdf-viewer {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto; /* Center the PDF viewer */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    cursor: pointer;
+}
+
+.pdf-viewer img {
+    width: 100%;
+    height: auto;
+}
+.download-button-container {
+    text-align: center;
+    margin-top: 20px;
+   
+}
+
+.download-button {
+    background-color: transparent;
+    color: black;
+    padding: 10px 15px; /* Adjusted size */
+    border: 2px solid #000; /* Black outline */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    
+   display: inline-block;
+}
+
+.download-button:hover {
+    background-color: #3498db; /* Blue button color on hover */
+    color: white; /* Black text color on hover */
+}
+a{
+    text-decoration: none;
+}
