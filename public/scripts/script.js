@@ -54,3 +54,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const messageMeBtn = document.getElementById('messageMeBtn');
+    
+
+    messageMeBtn.addEventListener('click', function () {
+        // Prompt the user's email service
+        window.location.href = 'mailto:yannietchi@gmail.com';
+
+        
+    });
+
+    // Function to fade in an element
+    function fadeIn(element, duration) {
+        element.style.opacity = 0;
+        let startTime;
+        function animate(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = currentTime - startTime;
+            element.style.opacity = progress / duration;
+            if (progress < duration) {
+                requestAnimationFrame(animate);
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+});
+

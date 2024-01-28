@@ -236,6 +236,7 @@ input[type="email"] {
 
 .social-links {
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .social-logo {
@@ -343,4 +344,18 @@ button:hover {
 }
 a{
     text-decoration: none;
+}
+#messageMeBtn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+#messageMeBtn:hover {
+    background-color: #2980b9; /* Change background color on hover */
 }
