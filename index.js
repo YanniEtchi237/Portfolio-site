@@ -43,43 +43,7 @@ app.get('/projects/:projectName', (req, res) => {
     });
 });
 
-// Contact form route
-app.post('/contact', (req, res) => {
-    // Check if body-parser has parsed the body correctly
-    if (!req.body) {
-        return res.status(400).send('Bad Request: No request body found');
-    }
 
-    const { name, email, message } = req.body;
-
-    // Create a Nodemailer transporter
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'yourgmail@gmail.com',
-            pass: 'yourgmailpassword'
-        }
-    });
-
-    // Email content
-    const mailOptions = {
-        from: 'yourgmail@gmail.com',
-        to: 'yannietchi@gmail.com', // Replace with your email
-        subject: 'New Contact Form Submission',
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    };
-
-    // Send email
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            res.status(500).send('Internal Server Error');
-        } else {
-            console.log('Email sent:', info.response);
-            res.send('Email sent successfully');
-        }
-    });
-});
 
 // Start the server
 app.listen(PORT, () => {
