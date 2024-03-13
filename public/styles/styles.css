@@ -1,44 +1,64 @@
-/* Add this to styles.css */
-/* Add this to styles.css */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #ffffff; /* Reverted to default background color */
-    color: #292b2c; /* Reverted to default text color */
+    /* Reverted to default text color */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
+
 nav {
-    background-color: rgba(238, 242, 246, 0.8); /* Translucent background color */
     padding: 1em 0;
     position: fixed; /* Make the navbar fixed */
     width: 100%; /* Take up the full width of the viewport */
     top: 0; /* Stick to the top of the viewport */
     z-index: 1000; /* Ensure the navbar appears above other e */
+    background-color: rgba(0, 0, 0, 0.35); /* Transparent background */
+    color: #fff; /* White font color */
     
+   
 }
 
-nav ul {
-    padding: 0;
+nav ul .right{
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0;
     list-style: none;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end !important;
 }
+nav ul {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    
+    
+}
+
+.nav .home-link {
+    margin-right: auto; /* Push home link to the left */
+}
+
 
 nav li {
     margin-left: 15px; /* Add space between navbar items */
     position: relative;
+    
 }
+
 
 nav a {
     text-decoration: none;
-    color: #292b2c;
     font-weight: bold;
     position: relative;
     transition: color 0.3s ease;
+    color: white;
+
 }
 
 nav a::after {
@@ -74,10 +94,40 @@ header {
     justify-content: space-between;
 }
 
-/* ... (rest of the styles, unchanged) */
+/* Landing Section */
+#landing {
+    position: relative; /* Ensure the overlay is positioned relative to this section */
+    background-image: url('../images/landing.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-attachment: fixed; /* Fix the background image */
+    background-position: center;
+    padding: 200px 0; /* Adjust padding as needed */
+    text-align: center; /* Center align text */
+}
+
+.landing-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black color */
+}
+
+.landing-section {
+    position: relative; /* Ensure the text is positioned relative to the landing section */
+    max-width: 800px; /* Limit width of content */
+    margin: 0 auto; /* Center content horizontally */
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add slight shadow to text */
+    font-size: 20px;
+    height:250px;
+}
+.landing-section h1{
+    font-size: 50px;
+}
 
 
-/* ... (rest of the styles, unchanged) */
 
 
 .profile-image {
@@ -91,11 +141,8 @@ header {
     flex-grow: 1;
 }
 
-h1,
-h2,
-h3 {
-    color: #292b2c;
-}
+
+
 
 section {
     padding: 3em 0;

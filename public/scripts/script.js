@@ -23,35 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Animation for the "About" section
-    anime({
-        targets: '.about-section',
-        translateY: [50, 0],
-        opacity: [0, 1],
-        duration: 1000,
-        easing: 'easeInOutQuad',
-        delay: anime.stagger(200, { start: 300 })
-    });
-
-    // Animation for the "Projects" section
-    anime({
-        targets: project,
-        translateY: [50, 0],
-        opacity: [0, 1],
-        easing: 'easeOutQuad',
-        duration: 1000,
-        delay: index * 200 // A
-    });
-
-    // Animation for the "Contact" section
-    anime({
-        targets: '.contact-form',
-        translateY: [50, 0],
-        opacity: [0, 1],
-        duration: 1000,
-        easing: 'easeInOutQuad',
-        delay: anime.stagger(200, { start: 900 })
-    });
+    
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -81,3 +53,46 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const options = {
+        root: null,
+        threshold: 0.2
+    };
+
+    const callback = function(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.id !== 'landing') {
+                animateSection(entry.target); // Animate the section
+                animateContent(entry.target); // Animate the content within the section
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    function animateSection(section) {
+        anime({
+            targets: section,
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 1000,
+            easing: 'easeOutQuad'
+        });
+    }
+
+    function animateContent(section) {
+        anime({
+            targets: section.querySelectorAll('.content > *'),
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 1000,
+            easing: 'easeOutQuad',
+            delay: anime.stagger(100) // Add delay between animations
+        });
+    }
+});
